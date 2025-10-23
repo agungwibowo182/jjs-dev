@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon - Countdown & Rundown</title>
+    <title>Jalan Jalan Sanns Jilid 3 - Coming Soon</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,6 +13,7 @@
         <div class="navigation-menu">
             <button id="show-countdown" class="nav-button active">Countdown</button>
             <button id="show-rundown" class="nav-button">Rundown Acara</button>
+            <button id="show-gallery" class="nav-button">Gallery</button> 
         </div>
 
         <div id="countdown-page" class="page-content active">
@@ -21,26 +22,14 @@
                 <br>
                 <p class="under-construction">Jalan Jalan Sanns Jilid 3</p>
                 <br>
-                <p class="under-construction"> 1 & 2 November 2025 Puncak Bogor Villa Yudi</p>
+                <p class="under-construction">1 & 2 November 2025 Puncak Bogor Villa Gadis</p>
             </div>
             
             <div class="countdown-timer">
-                <div class="time-box">
-                    <span class="number" id="days">00</span>
-                    <span class="label">DAYS</span>
-                </div>
-                <div class="time-box">
-                    <span class="number" id="hours">00</span>
-                    <span class="label">HOURS</span>
-                </div>
-                <div class="time-box">
-                    <span class="number" id="minutes">00</span>
-                    <span class="label">MINUTES</span>
-                </div>
-                <div class="time-box">
-                    <span class="number" id="seconds">00</span>
-                    <span class="label">SECONDS</span>
-                </div>
+                <div class="time-box"><span class="number" id="days">00</span><span class="label">DAYS</span></div>
+                <div class="time-box"><span class="number" id="hours">00</span><span class="label">HOURS</span></div>
+                <div class="time-box"><span class="number" id="minutes">00</span><span class="label">MINUTES</span></div>
+                <div class="time-box"><span class="number" id="seconds">00</span><span class="label">SECONDS</span></div>
             </div>
 
             <div class="image-below-countdown">
@@ -48,60 +37,154 @@
             </div>
         </div> 
         
-        <div id="rundown-page" class="page-content hidden">
+        <!-- Halaman Rundown (versi card layout dinamis) -->
+<div id="rundown-page" class="page-content hidden">
     <h2 class="rundown-title">Rundown Acara JJS Jilid 3</h2>
-    
-    <div class="rundown-table-wrapper">
-        <table>
-            <thead>
-                <tr>
-                    <th colspan="3" class="day-header">Hari 1 – Sabtu, 1 November 2025</th>
-                </tr>
-                <tr>
-                    <th>Waktu</th>
-                    <th>Kegiatan</th>
-                    <th>Keterangan</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>07.00 – 09.00</td><td>Kumpul & berangkat</td><td>Start bareng, vibes udah dibangun dari mobil</td></tr>
-                <tr><td>09.00 – 11.00</td><td>Sampai villa, check-in</td><td>Bagi kamar, ngopi dulu</td></tr>
-                <tr><td>11.00 – 12.30</td><td>Makan siang bareng</td><td>Pembuka acara resmi tapi santai</td></tr>
-                <tr><td>13.00 – 15.00</td><td>Games seru & ice breaking</td><td>Lomba kocak: tebak gaya, relay air, dll</td></tr>
-                <tr><td>15.00 – 17.00</td><td>Free time / chill</td><td>Karaoke, berenang, atau rebahan santai</td></tr>
-                <tr><td>17.00 – 18.30</td><td>Persiapan BBQ</td><td>Tim konsumsi mulai bakar-bakar</td></tr>
-                <tr><td>18.30 – 21.30</td><td>BBQ Party & malam keakraban</td><td>Ada live music, curhat nostalgia, tuker kado kecil</td></tr>
-                <tr><td>21.30 – bebas</td><td>Nongkrong malam, sharing, main kartu</td><td>Momen hangat & jujur bareng temen-temen</td></tr>
-                <tr><td>Tengan Malam</td><td>Bermunajat Kepada Allah SWT (Masing - Masing)</td><td>Surat Al-Isra': 79</td></tr>
-            </tbody>
 
-            <thead>
-                <tr>
-                    <th colspan="3" class="day-header">Hari 2 – Minggu, 2 November 2025</th>
-                </tr>
-                <tr>
-                    <th>Waktu</th>
-                    <th>Kegiatan</th>
-                    <th>Keterangan</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>04.00 – 05.00</td><td>Sholat Shubuh</td><td>رَكْعَتَا الْفَجْرِ خَيْرٌ مَنَ الدُّنْيَا وَمَا فِيْهَا [HR. Muslim]</td></tr>
-                <tr><td>06.30 – 07.30</td><td>Morning walk / jalan santai</td><td>Sekalian udara pagi Puncak</td></tr>
-                <tr><td>07.30 – 08.30</td><td>Sarapan bareng</td><td>Ngopi dan ngemil bareng lagi</td></tr>
-                <tr><td>08.30 – 10.00</td><td>Games penutup & sesi kenangan</td><td>Main game bareng + foto grup</td></tr>
-                <tr><td>10.00 – 11.00</td><td>Packing & check-out</td><td>Siap-siap pulang</td></tr>
-                <tr><td>11.00 – 12.00</td><td>Makan siang / kuliner bareng</td><td>Penutup acara yang chill & kenyang</td></tr>
-            </tbody>
-        </table>
+    <!-- Hari 1 -->
+    <div class="rundown-day">
+        <h3 class="day-header">Hari 1 – Sabtu, 1 November 2025</h3>
+
+        <div class="rundown-cards">
+            <div class="rundown-card">
+                <h4>07.00 – 09.00</h4>
+                <p class="activity">Kumpul & berangkat</p>
+                <p class="desc">Start bareng, vibes udah dibangun dari mobil</p>
+            </div>
+
+            <div class="rundown-card">
+                <h4>09.00 – 11.00</h4>
+                <p class="activity">Sampai villa, check-in</p>
+                <p class="desc">Bagi kamar, ngopi dulu</p>
+            </div>
+
+            <div class="rundown-card">
+                <h4>11.00 – 12.30</h4>
+                <p class="activity">Makan siang bareng</p>
+                <p class="desc">Pembuka acara resmi tapi santai</p>
+            </div>
+
+            <div class="rundown-card">
+                <h4>13.00 – 15.00</h4>
+                <p class="activity">Games seru & ice breaking</p>
+                <p class="desc">Lomba kocak: tebak gaya, relay air, dll</p>
+            </div>
+
+            <div class="rundown-card">
+                <h4>15.00 – 17.00</h4>
+                <p class="activity">Free time / chill</p>
+                <p class="desc">Karaoke, berenang, atau rebahan santai</p>
+            </div>
+
+            <div class="rundown-card">
+                <h4>17.00 – 18.30</h4>
+                <p class="activity">Persiapan BBQ</p>
+                <p class="desc">Tim konsumsi mulai bakar-bakar</p>
+            </div>
+
+            <div class="rundown-card">
+                <h4>18.30 – 21.30</h4>
+                <p class="activity">BBQ Party & malam keakraban</p>
+                <p class="desc">Ada live music, curhat nostalgia, tuker kado kecil</p>
+            </div>
+
+            <div class="rundown-card">
+                <h4>21.30 – bebas</h4>
+                <p class="activity">Nongkrong malam, sharing, main kartu</p>
+                <p class="desc">Momen hangat & jujur bareng temen-temen</p>
+            </div>
+
+            <div class="rundown-card">
+                <h4>Tengah Malam</h4>
+                <p class="activity">Bermunajat Kepada Allah SWT</p>
+                <p class="desc">Surat Al-Isra’: 79</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hari 2 -->
+    <div class="rundown-day">
+        <h3 class="day-header">Hari 2 – Minggu, 2 November 2025</h3>
+
+        <div class="rundown-cards">
+            <div class="rundown-card">
+                <h4>04.00 – 05.00</h4>
+                <p class="activity">Sholat Shubuh</p>
+                <p class="desc">رَكْعَتَا الْفَجْرِ خَيْرٌ مَنَ الدُّنْيَا وَمَا فِيْهَا [HR. Muslim]</p>
+            </div>
+
+            <div class="rundown-card">
+                <h4>06.30 – 07.30</h4>
+                <p class="activity">Morning walk / jalan santai</p>
+                <p class="desc">Sekalian udara pagi Puncak</p>
+            </div>
+
+            <div class="rundown-card">
+                <h4>07.30 – 08.30</h4>
+                <p class="activity">Sarapan bareng</p>
+                <p class="desc">Ngopi dan ngemil bareng lagi</p>
+            </div>
+
+            <div class="rundown-card">
+                <h4>08.30 – 10.00</h4>
+                <p class="activity">Games penutup & sesi kenangan</p>
+                <p class="desc">Main game bareng + foto grup</p>
+            </div>
+
+            <div class="rundown-card">
+                <h4>10.00 – 11.00</h4>
+                <p class="activity">Packing & check-out</p>
+                <p class="desc">Siap-siap pulang</p>
+            </div>
+
+            <div class="rundown-card">
+                <h4>11.00 – 12.00</h4>
+                <p class="activity">Makan siang / kuliner bareng</p>
+                <p class="desc">Penutup acara yang chill & kenyang</p>
+            </div>
+        </div>
     </div>
 </div>
 
+        
+
+        <div id="gallery-page" class="page-content hidden"> 
+            <h2 class="rundown-title">GALLERY VILLA</h2>
+            <div class="gallery-grid" id="gallery-grid"> 
+                </div>
+
+            <h2 class="rundown-title map-title">LOKASI VILLA</h2>
+            <div class="map-container">
+                <a 
+                    href="https://maps.app.goo.gl/2RfCUYE8PqieN7ay6?g_st=aw" 
+                    target="_blank" 
+                    class="map-link-overlay"
+                    title="Klik untuk navigasi rute">
+                </a>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123!2d106.9!3d-6.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMzgnNDMuMiJTIDEwNsKwNTQnMTkuNCJF!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    id="villa-map">
+                </iframe>
+            </div> 
+        </div> </div> <div id="lightbox" class="lightbox-overlay hidden">
+        <div class="lightbox-content">
+            <span class="close-btn">×</span>
+            <img id="lightbox-image" src="" alt="Gallery Image">
+            <div class="lightbox-caption"></div>
+            <div class="lightbox-navigation">
+                <button class="prev-btn">&leftarrow;</button>
+                <span class="image-counter"></span>
+                <button class="next-btn">&rightarrow;</button>
+            </div>
+        </div>
     </div>
-
+    
     <script src="script.js"></script>
-
 </body>
-
 </html>
-
