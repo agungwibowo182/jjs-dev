@@ -1,0 +1,335 @@
+:root {
+    --primary-color: #ff8c00; /* Oranye Terang */
+    --text-color-dark: #222;
+    --text-color-light: #fff;
+    --box-bg: #000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container {
+    padding: 20px;
+    max-width: 90%; /* Responsif */
+}
+
+/* --- Bagian Header --- */
+.header {
+    margin-bottom: 40px;
+    position: relative;
+    /* Efek garis miring di belakang teks (seperti di gambar) */
+    background: 
+        linear-gradient(135deg, transparent 49%, var(--text-color-light) 49%, var(--text-color-light) 51%, transparent 51%),
+        linear-gradient(-135deg, transparent 49%, var(--text-color-light) 49%, var(--text-color-light) 51%, transparent 51%);
+    background-size: 100% 1px;
+    background-repeat: repeat-x;
+}
+
+.coming-soon {
+    background-color: var(--box-bg);
+    color: #ffd700; /* Kuning keemasan untuk kontras */
+    padding: 10px 30px;
+    display: inline-block;
+    font-size: 2.5em; /* Ukuran besar */
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    transform: skewX(-10deg); /* Miring sedikit */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.under-construction {
+    background-color: var(--text-color-light);
+    color: var(--text-color-dark);
+    padding: 5px 15px;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 700;
+    margin-top: 5px;
+    text-transform: uppercase;
+    transform: skewX(-10deg);
+}
+
+
+/* --- Bagian Countdown Timer --- */
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Jarak antar kotak */
+}
+
+.time-box {
+    background-color: var(--box-bg);
+    color: var(--text-color-light);
+    padding: 15px 10px;
+    width: 23%; /* Memastikan 4 kotak muat dalam lebar total */
+    min-width: 60px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.number {
+    font-size: 3em; /* Besar di desktop */
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.label {
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+/* --- Media Queries untuk Responsifitas (Smartphone/Tablet) --- */
+@media (max-width: 768px) {
+    .coming-soon {
+        font-size: 1.8em;
+        padding: 8px 20px;
+    }
+
+    .under-construction {
+        font-size: 0.8em;
+    }
+
+    .countdown-timer {
+        gap: 10px;
+    }
+
+    .number {
+        font-size: 2em; /* Kecilkan sedikit di perangkat mobile */
+    }
+
+    .label {
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 480px) {
+    .coming-soon {
+        font-size: 1.5em;
+        letter-spacing: 3px;
+    }
+    
+    .number {
+        font-size: 1.5em;
+    }
+}
+
+/* --- Tambahan untuk Gambar di Bawah Countdown --- */
+.image-below-countdown {
+    margin-top: 30px; /* Jarak dari countdown timer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.responsive-image {
+    max-width: 100%; /* Gambar akan mengecil jika layar lebih kecil */
+    height: auto; /* Mempertahankan rasio aspek gambar */
+    display: block; /* Menghilangkan ruang kosong di bawah gambar */
+    border-radius: 10px; /* Sedikit lengkungan pada sudut gambar (opsional) */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sedikit bayangan (opsional) */
+}
+
+/* --- Tambahan CSS untuk Menu Navigasi --- */
+.navigation-menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.nav-button {
+    background-color: var(--box-bg); /* Hitam */
+    color: var(--text-color-light); /* Putih */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #333;
+}
+
+.nav-button.active {
+    background-color: #ffd700; /* Kuning keemasan */
+    color: var(--box-bg); /* Teks hitam */
+}
+
+/* --- Pengaturan Halaman dan Hide/Show --- */
+.page-content {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.page-content.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* --- Gaya untuk Tabel Rundown Acara --- */
+#rundown-page h2 {
+    color: var(--text-color-light);
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.rundown-table-wrapper {
+    max-width: 100%;
+    overflow-x: auto; /* Agar tabel bisa digeser jika terlalu lebar di mobile */
+}
+
+.rundown-table-wrapper table {
+    width: 100%;
+    min-width: 400px; /* Minimal lebar tabel di mobile */
+    border-collapse: collapse;
+    background-color: var(--text-color-light);
+    color: var(--text-color-dark);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.rundown-table-wrapper th,
+.rundown-table-wrapper td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.rundown-table-wrapper th {
+    background-color: var(--box-bg);
+    color: #ffd700;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.rundown-table-wrapper tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+/* Responsifitas untuk Rundown */
+@media (max-width: 768px) {
+    .rundown-table-wrapper th,
+    .rundown-table-wrapper td {
+        padding: 8px 10px;
+        font-size: 0.85em;
+    }
+}
+
+/* --- Gaya untuk Tabel Rundown Acara yang Diperbarui --- */
+#rundown-page h2 {
+    background-color: var(--text-color-light); /* Putih */
+    color: var(--text-color-dark); /* Hitam */
+    padding: 5px 15px;
+    display: inline-block; /* Penting agar background hanya selebar teks */
+    font-size: 1.5em; /* Ukuran disesuaikan */
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 25px; /* Jarak dari tabel di bawahnya */
+    text-transform: uppercase;
+    transform: skewX(-10deg); /* Efek miring */
+}
+
+.rundown-table-wrapper {
+    max-width: 100%;
+    overflow-x: auto; 
+    /* Kontainer untuk menjaga tabel tetap terpusat dan rapi */
+}
+
+.rundown-table-wrapper table {
+    width: 100%;
+    min-width: 500px; /* Minimal lebar tabel untuk desktop dan tablet */
+    border-collapse: separate; /* Menggunakan separate agar bisa menerapkan border-radius */
+    border-spacing: 0;
+    background-color: var(--text-color-light); /* Latar belakang putih */
+    color: var(--text-color-dark); /* Teks hitam */
+    border-radius: 12px; /* Sudut lebih melengkung */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Bayangan yang lebih menonjol */
+}
+
+/* Header (Kepala Tabel) */
+.rundown-table-wrapper th {
+    background-color: var(--box-bg); /* Latar belakang Hitam */
+    color: #ffd700; /* Teks Kuning Keemasan */
+    font-weight: 800; /* Lebih tebal */
+    text-transform: uppercase;
+    font-size: 1em;
+    padding: 15px 20px;
+    letter-spacing: 0.5px;
+}
+
+/* Border radius untuk sudut header */
+.rundown-table-wrapper tr:first-child th:first-child {
+    border-top-left-radius: 12px;
+}
+
+.rundown-table-wrapper tr:first-child th:last-child {
+    border-top-right-radius: 12px;
+}
+
+/* Baris Data */
+.rundown-table-wrapper td {
+    padding: 12px 20px;
+    text-align: left;
+    font-size: 1em;
+    border-bottom: 1px solid #eee; /* Garis pemisah lebih tipis */
+}
+
+/* Warna selang-seling (Zebra Stripping) */
+.rundown-table-wrapper tr:nth-child(even) {
+    background-color: #f0f0f0; /* Abu-abu muda untuk kontras */
+}
+
+/* Baris Terakhir */
+.rundown-table-wrapper tr:last-child td {
+    border-bottom: none; 
+}
+
+/* Responsifitas untuk Rundown */
+@media (max-width: 768px) {
+    .rundown-table-wrapper th,
+    .rundown-table-wrapper td {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+
+    .rundown-table-wrapper table {
+        min-width: 100%; /* Biarkan tabel memanjang sesuai lebar layar */
+        border-radius: 8px; /* Sudut lebih kecil di mobile */
+    }
+}
+
+/* Gaya untuk Header Hari */
+.rundown-table-wrapper .day-header {
+    background-color: #ffd700; /* Kuning keemasan */
+    color: var(--box-bg); /* Teks hitam */
+    font-size: 1.2em;
+    font-weight: 900;
+    text-align: center;
+    padding: 10px 0;
+    letter-spacing: 1px;
+}
