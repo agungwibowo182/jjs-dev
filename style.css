@@ -1,9 +1,8 @@
 :root {
     --primary-color: #ff8c00; /* Oranye Terang */
-    --text-color-dark: #000; /* Semua teks jadi hitam */
-    --text-color-light: #000; /* Semuanya hitam juga */
-    --box-bg: #fff; /* Ganti kotak jadi putih agar teks hitam terlihat */
-    --gold-color: #ffd700; /* Kuning keemasan */
+    --text-color-dark: #222;
+    --text-color-light: #fff;
+    --box-bg: #000;
 }
 
 * {
@@ -14,7 +13,6 @@
 
 body {
     background-color: var(--primary-color);
-    color: #000;
     font-family: sans-serif;
     display: flex;
     justify-content: center;
@@ -42,7 +40,6 @@ body {
 
 .coming-soon {
     background-color: var(--box-bg);
-     color: #000;
     color: #ffd700; /* Kuning keemasan untuk kontras */
     padding: 10px 30px;
     display: inline-block;
@@ -581,4 +578,16 @@ body { background-color: var(--primary-color); font-family: sans-serif; display:
     .rundown-cards {
         max-height: none;
     }
+}
+
+/* Gaya untuk link Maps di halaman Countdown */
+a.click-maps-link {
+    /* Memastikan link mewarisi gaya under-construction */
+    text-decoration: none; /* Hapus garis bawah link */
+    cursor: pointer;
+    margin-top: 15px; /* Tambahkan jarak dari teks di atasnya */
+}
+
+a.click-maps-link:hover {
+    text-decoration: underline; /* Tambahkan garis bawah saat hover sebagai indikator klik */
 }

@@ -172,3 +172,27 @@ document.addEventListener('keydown', (e) => {
 
 // Inisialisasi Galeri saat script dimuat
 createGallery();
+// --- Tambahkan ini ke bagian Event Listener di script.js ---
+
+    const mapsLink = document.querySelector('.click-maps-link');
+
+    if (mapsLink) {
+        mapsLink.addEventListener('click', (e) => {
+            e.preventDefault(); // Mencegah perilaku hash link default
+            
+            // 1. Pindah ke halaman Gallery
+            switchPage('gallery');
+
+            // 2. Gulir ke target (#lokasi-villa) setelah halaman berganti
+            // Delay 100ms memberi waktu browser untuk mengganti display page
+            setTimeout(() => {
+                const targetElement = document.getElementById('lokasi-villa');
+                if (targetElement) {
+                    // Gunakan behavior: 'smooth' untuk guliran yang mulus
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
+                }
+            }, 100); 
+        });
+    }
+
+// --- End Event Listener Tambahan ---
